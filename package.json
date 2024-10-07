@@ -11,9 +11,7 @@
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
     "lint:scss": "npx stylelint \"**/*.scss\"",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
-    "unit": "jest --config ./config/jest/jest.config.ts",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "unit": "jest --config ./config/jest/jest.config.ts"
   },
   "keywords": [],
   "author": "",
@@ -23,12 +21,6 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
-    "@storybook/addon-actions": "^8.3.5",
-    "@storybook/addon-essentials": "^8.3.5",
-    "@storybook/addon-interactions": "^8.3.5",
-    "@storybook/addon-links": "^8.3.5",
-    "@storybook/react": "^8.3.5",
-    "@storybook/testing-library": "^0.2.2",
     "@svgr/webpack": "^6.2.1",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",

@@ -1,7 +1,8 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
+import React from 'react';
 
-import { Button } from './Button';
+import type { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Button, ThemeButton } from './Button';
+
 
 const meta: Meta<typeof Button> = {
   title: 'shared/Button',
@@ -10,18 +11,21 @@ const meta: Meta<typeof Button> = {
     layout: 'centered',
   },
   tags: ['autodocs'],
-  argTypes: {
-  },
-  args: { onClick: fn() },
 };
 
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-export const Primary: Story = {
-  args: {
-  
-  },
+const Template: StoryFn<typeof Button> = (args) => <Button {...args} />;
+
+export const Primary = Template.bind({});
+Primary.args = {
+  children: 'Text',
+    // theme: ThemeButton.CLEAR
 };
 
-
+export const Clear = Template.bind({});
+Clear.args = {
+  children: 'Text',
+  // theme: ThemeButton.CLEAR
+};

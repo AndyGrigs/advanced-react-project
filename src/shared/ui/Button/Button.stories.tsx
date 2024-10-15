@@ -7,15 +7,12 @@ import 'app/styles/index.scss'
 const meta: Meta<typeof Button> = {
   title: 'shared/Button',
   component: Button,
-  parameters: {
-    layout: 'centered',
-  },
   tags: ['autodocs'],
 };
 
 export default meta;
 type Story = StoryObj<typeof Button>;
-
+ 
 const Template: StoryFn<typeof Button> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
